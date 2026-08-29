@@ -2,15 +2,25 @@
 cd /d "%~dp0"
 title III85III - Windows Optimization Toolkit
 color 0B
+chcp 65001 >nul
 
-:: Animation loop
+:: --- Animation Stage ---
 for /l %%i in (1,1,3) do (
     cls
     echo.
-    echo          LOADING...
+    echo          LOADING TOOLS...
     echo.
     echo      /\_/\
     echo     ( o.o )
+    echo      ^> ^ <
+    echo.
+    choice /t 1 /d y >nul
+    cls
+    echo.
+    echo          LOADING TOOLS...
+    echo.
+    echo      /\_/\
+    echo     ( -.- )
     echo      ^> ^ <
     echo.
     choice /t 1 /d y >nul
@@ -39,6 +49,11 @@ echo   [8] Exit
 echo.
 echo ==============================================================================
 echo   ^> Creator: III85III
+echo ==============================================================================
+echo.
+echo      /\_/\
+echo     ( o.o )
+echo      ^> ^ <
 echo ==============================================================================
 
 set /p choice=" Enter your choice (1-8): "
