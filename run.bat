@@ -1,5 +1,7 @@
 @echo off
 title Windows Optimization Toolkit - Created by III85III
+color 0B
+
 :menu
 cls
 echo ==========================================
