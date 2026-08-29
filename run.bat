@@ -1,8 +1,10 @@
 @echo off
+title Windows Optimization Toolkit - Created by III85III
 :menu
 cls
 echo ==========================================
 echo       Windows Optimization Toolkit
+echo       Developer: III85III
 echo ==========================================
 echo 1. Auto Disk Cleanup (Full)
 echo 2. Enable High Performance Power Plan
