@@ -1,15 +1,32 @@
 @echo off
-:: Force the script to run from its own directory
 cd /d "%~dp0"
-
-:: Set console title and modern color (Cyan on Black)
 title III85III - Windows Optimization Toolkit
 color 0B
+chcp 65001 >nul
+
+:: Animation loop for the cat
+for /l %%i in (1,1,5) do (
+    cls
+    echo.
+    echo          LOADING...
+    echo.
+    echo    /\_/\
+    echo   ( o.o )
+    echo    ^> ^ <
+    timeout /t 1 >nul
+    cls
+    echo.
+    echo          LOADING...
+    echo.
+    echo       /\_/\
+    echo      ( o.o )
+    echo       ^> ^ <
+    timeout /t 1 >nul
+)
 
 :menu
 cls
 echo ==============================================================================
-echo.
 echo     ██╗██╗██╗██████╗  ███████╗███████╗██╗
 echo     ██║██║██║╚════██╗ ██╔════╝██╔════╝██║
 echo     ██║██║██║ █████╔╝ ███████╗███████╗██║
@@ -31,10 +48,6 @@ echo.
 echo ==============================================================================
 echo   ^> Creator: III85III
 echo ==============================================================================
-echo   /\_/\
-echo  ( o.o )  * Purr... Ready to optimize your system! *
-echo   > ^ <
-echo ==============================================================================
 
 set /p choice=" Enter your choice (1-8): "
 
@@ -47,6 +60,6 @@ if "%choice%"=="6" call "%~dp0scripts\extreme_debloat.bat" & pause & goto menu
 if "%choice%"=="7" call "%~dp0scripts\run_god_mode.bat" & pause & goto menu
 if "%choice%"=="8" exit
 
-echo Invalid choice, try again.
+echo Invalid choice.
 pause
 goto menu
