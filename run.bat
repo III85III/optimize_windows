@@ -1,33 +1,19 @@
 @echo off
-cd /d "%~dp0"
-title III85III - Windows Optimization Toolkit
-color 0B
-
 :menu
 cls
-echo ==============================================================================
-echo                      [ Windows Optimization Toolkit ]
-echo                      [      Creator: III85III       ]
-echo ==============================================================================
-echo.
-echo   [1] Auto Disk Cleanup (Full)
-echo   [2] Enable High Performance Power Plan
-echo   [3] Optimize Network (TCP/IP)
-echo   [4] System Health Check
-echo   [5] Disable Bloatware
-echo   [6] Extreme Debloat
-echo   [7] Enable God Mode
-echo   [8] Exit
-echo.
-echo ==============================================================================
-echo.
-echo      /\_/\
-echo     ( o.o )
-echo      ^> ^ <
-echo.
-echo ==============================================================================
-
-set /p choice=" Enter your choice (1-8): "
+echo ==========================================
+echo       Windows Optimization Toolkit
+echo ==========================================
+echo 1. Auto Disk Cleanup (Full)
+echo 2. Enable High Performance Power Plan
+echo 3. Optimize Network (TCP/IP)
+echo 4. System Health Check
+echo 5. Disable Bloatware
+echo 6. Extreme Debloat
+echo 7. Enable God Mode
+echo 8. Exit
+echo ==========================================
+set /p choice="Enter your choice (1-8): "
 
 if "%choice%"=="1" call "%~dp0scripts\auto_disk_cleanup.bat" & pause & goto menu
 if "%choice%"=="2" call "%~dp0scripts\set_high_perf.bat" & pause & goto menu
@@ -38,6 +24,6 @@ if "%choice%"=="6" call "%~dp0scripts\extreme_debloat.bat" & pause & goto menu
 if "%choice%"=="7" call "%~dp0scripts\run_god_mode.bat" & pause & goto menu
 if "%choice%"=="8" exit
 
-echo Invalid choice.
+echo Invalid choice, try again.
 pause
 goto menu
