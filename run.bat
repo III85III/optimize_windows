@@ -2,41 +2,12 @@
 cd /d "%~dp0"
 title III85III - Windows Optimization Toolkit
 color 0B
-chcp 65001 >nul
-
-:: --- Extended Animation Stage ---
-for /l %%i in (1,1,2) do (
-    cls
-    echo.
-    echo          LOADING TOOLS...
-    echo.
-    echo      /\_/\
-    echo     ( o.o )
-    echo      ^> ^ <
-    echo.
-    :: Increased timeout to 2 seconds per frame
-    timeout /t 2 /nobreak >nul
-    cls
-    echo.
-    echo          LOADING TOOLS...
-    echo.
-    echo      /\_/\
-    echo     ( -.- )
-    echo      ^> ^ <
-    echo.
-    timeout /t 2 /nobreak >nul
-)
 
 :menu
 cls
 echo ==============================================================================
-echo     ██╗██╗██╗██████╗  ███████╗███████╗██╗
-echo     ██║██║██║╚════██╗ ██╔════╝██╔════╝██║
-echo     ██║██║██║ █████╔╝ ███████╗███████╗██║
-echo     ██║██║██║ ╚═══██╗ ╚════██║╚════██║██║
-echo     ╚═╝╚═╝╚═╝██████╔╝ ███████║███████║██║
-echo     ╚═══════════════╝ ╚══════╝╚══════╝╚═╝
 echo                      [ Windows Optimization Toolkit ]
+echo                      [      Creator: III85III       ]
 echo ==============================================================================
 echo.
 echo   [1] Auto Disk Cleanup (Full)
@@ -49,12 +20,11 @@ echo   [7] Enable God Mode
 echo   [8] Exit
 echo.
 echo ==============================================================================
-echo   ^> Creator: III85III
-echo ==============================================================================
 echo.
 echo      /\_/\
 echo     ( o.o )
 echo      ^> ^ <
+echo.
 echo ==============================================================================
 
 set /p choice=" Enter your choice (1-8): "
