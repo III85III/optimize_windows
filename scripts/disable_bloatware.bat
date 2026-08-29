@@ -1,30 +1,29 @@
 @echo off
-title III85III - Process & Background Killer
+setlocal
 echo ========================================
 echo    DISABLING USELESS WINDOWS SERVICES
 echo ========================================
 
-echo [+] Stopping SysMain (Superfetch - reduces disk/RAM load)...
-sc stop SysMain
-sc config SysMain start= disabled
+:: Use >nul 2>&1 to hide "Service not started" errors
+echo [+] Stopping SysMain...
+sc stop SysMain >nul 2>&1
+sc config SysMain start= disabled >nul 2>&1
 
-echo [+] Stopping DiagTrack (Telemetry/Tracking)...
-sc stop DiagTrack
-sc config DiagTrack start= disabled
+echo [+] Stopping DiagTrack...
+sc stop DiagTrack >nul 2>&1
+sc config DiagTrack start= disabled >nul 2>&1
 
-echo [+] Stopping WSearch (Windows Search - optional, saves CPU)...
-sc stop WSearch
-sc config WSearch start= disabled
+echo [+] Stopping WSearch...
+sc stop WSearch >nul 2>&1
+sc config WSearch start= disabled >nul 2>&1
 
-echo [+] Stopping Xbox Game Monitoring Services...
-sc stop XblAuthManager
-sc config XblAuthManager start= disabled
-sc stop XblGameSave
-sc config XblGameSave start= disabled
-sc stop XboxNetApiSvc
-sc config XboxNetApiSvc start= disabled
+echo [+] Stopping Xbox Services...
+sc stop XblAuthManager >nul 2>&1
+sc config XblAuthManager start= disabled >nul 2>&1
+sc stop XblGameSave >nul 2>&1
+sc config XblGameSave start= disabled >nul 2>&1
 
 echo ========================================
-echo    SERVICES OPTIMIZED & DISABLED!
+echo    SERVICES OPTIMIZED AND DISABLED
 echo ========================================
-pause
+endlocal
