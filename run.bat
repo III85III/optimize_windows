@@ -1,4 +1,7 @@
 @echo off
+:: Force the script to run from its own directory
+cd /d "%~dp0"
+
 :menu
 cls
 echo ==========================================
