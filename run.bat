@@ -15,10 +15,11 @@ echo 5. Exit
 echo ==========================================
 set /p choice="Enter your choice (1-5): "
 
-if "%choice%"=="1" call scripts\auto_disk_cleanup.bat & pause & goto menu
-if "%choice%"=="2" call scripts\disable_bloatware.bat & pause & goto menu
-if "%choice%"=="3" call scripts\extreme_debloat.bat & pause & goto menu
-if "%choice%"=="4" call scripts\run_god_mode.bat & pause & goto menu
+:: Use the directory of the batch file + scripts folder to ensure correct path
+if "%choice%"=="1" call "%~dp0scripts\auto_disk_cleanup.bat" & pause & goto menu
+if "%choice%"=="2" call "%~dp0scripts\disable_bloatware.bat" & pause & goto menu
+if "%choice%"=="3" call "%~dp0scripts\extreme_debloat.bat" & pause & goto menu
+if "%choice%"=="4" call "%~dp0scripts\run_god_mode.bat" & pause & goto menu
 if "%choice%"=="5" exit
 
 echo Invalid choice, try again.
