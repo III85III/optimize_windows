@@ -2,26 +2,18 @@
 cd /d "%~dp0"
 title III85III - Windows Optimization Toolkit
 color 0B
-chcp 65001 >nul
 
-:: Animation loop for the cat
-for /l %%i in (1,1,5) do (
+:: Animation loop
+for /l %%i in (1,1,3) do (
     cls
     echo.
     echo          LOADING...
     echo.
-    echo    /\_/\
-    echo   ( o.o )
-    echo    ^> ^ <
-    timeout /t 1 >nul
-    cls
+    echo      /\_/\
+    echo     ( o.o )
+    echo      ^> ^ <
     echo.
-    echo          LOADING...
-    echo.
-    echo       /\_/\
-    echo      ( o.o )
-    echo       ^> ^ <
-    timeout /t 1 >nul
+    choice /t 1 /d y >nul
 )
 
 :menu
