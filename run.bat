@@ -4,8 +4,8 @@ title III85III - Windows Optimization Toolkit
 color 0B
 chcp 65001 >nul
 
-:: --- Animation Stage ---
-for /l %%i in (1,1,3) do (
+:: --- Extended Animation Stage ---
+for /l %%i in (1,1,2) do (
     cls
     echo.
     echo          LOADING TOOLS...
@@ -14,7 +14,8 @@ for /l %%i in (1,1,3) do (
     echo     ( o.o )
     echo      ^> ^ <
     echo.
-    choice /t 1 /d y >nul
+    :: Increased timeout to 2 seconds per frame
+    timeout /t 2 /nobreak >nul
     cls
     echo.
     echo          LOADING TOOLS...
@@ -23,7 +24,7 @@ for /l %%i in (1,1,3) do (
     echo     ( -.- )
     echo      ^> ^ <
     echo.
-    choice /t 1 /d y >nul
+    timeout /t 2 /nobreak >nul
 )
 
 :menu
